@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kaushan+Script&display=swap');
+    </style>
+    <script>
+        function salvar(){
+            let form = document.getElementById("form-cadastro")
+            let nome = form.nome.value
+            let especie = form.especie.value
+            if (nome.trim() == ""){
+                alert("Preencha o Nome da Planta")
+                return false
+            }
+            if (especie.trim() == ""){
+                alert("Preencha a Espécie")
+                return false
+            }
+            alert("cadastrado com Sucesso")
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="topo">
+            <h1>Your Plants</h1>
+        </div>
+    </header>
+
+    <section>
+        <form id="form-cadastro" onsubmit="return false">
+            <div class="linha">
+                <label>Nome da Planta</label>
+                <input type="text" name="nome" maxlength="30" placeholder="(Obrigatório)" />
+            </div>
+            <div class="linha">
+                <label>Espécie</label>
+                <input type="text" name="especie" maxlength="30" placeholder="(Obrigatório)" />
+            </div>
+            <div class="linha">
+                <label>Altura Máxima</label>
+                <input type="text" name="altura-maxima" maxlength="10" placeholder="(Opcional)" />
+            </div>
+            <input type="submit" name="enviar" value="Cadastrar" onclick="salvar()" />
+        </form>
+        
+    </section>
+    
+</body>
+</html>
